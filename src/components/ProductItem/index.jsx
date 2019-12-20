@@ -15,7 +15,6 @@ const ProductItem = props => {
   return (
     <tr>
       <th scope="row">{index}</th>
-      <td> {product.id} </td>
       <td> {product.name} </td>
       <td> {product.price} </td>
       <td>
@@ -29,6 +28,13 @@ const ProductItem = props => {
           <button type="button" className="btn btn-danger" onClick={()=>Remove(product.id)}>
             Remove
           </button>
+        </div>
+      </td>
+      <td>
+        <div className="btn-group btn-group-sm" role="group">
+          <Link to={`/product/${product.id}`} className="btn btn-second">
+            Detail
+          </Link>
         </div>
       </td>
     </tr>

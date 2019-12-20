@@ -3,6 +3,7 @@ import HomePage from "./pages/HomePage";
 import NotFoundPage from "./pages/NotFoundPage";
 import ProductsListPage from "./pages/ProductsListPage";
 import ProductActionPage from "./pages/ProductActionPage";
+import ProductDetailPage from "./pages/ProductDetailPage";
 
 const routes = [
   {
@@ -24,6 +25,11 @@ const routes = [
     path: "/product/:id/edit",
     exact: false,
     main: ({ match, history }) => <ProductActionPage match={match} history={history} />
+  },
+  {
+    path: "/product/:id",
+    exact: false,
+    main: ({ match, history }) => <ProductDetailPage match={match} history={history} />
   },
   {
     path: "",

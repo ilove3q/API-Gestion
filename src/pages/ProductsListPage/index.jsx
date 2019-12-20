@@ -2,16 +2,18 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 
-
 import ProductsList from "../../components/ProductsList";
 import ProductItem from "../../components/ProductItem";
 
-import { actFetchProductsRequest, actRemoveProductRequest } from "../../actions";
+import {
+  actFetchProductsRequest,
+  actRemoveProductRequest
+} from "../../actions";
 
 const ProductsListPage = () => {
   const products = useSelector(state => state.products);
   const dispatch = useDispatch();
-  
+
   useEffect(() => {
     dispatch(actFetchProductsRequest());
   }, []);
@@ -21,12 +23,12 @@ const ProductsListPage = () => {
       ListProducts.length === 0
         ? null
         : ListProducts.map((product, key) => (
-            <ProductItem
-              key={key}
-              product={product}
-              index={key + 1}
-              onRemove={onRemove}
-            />
+              <ProductItem
+                key={key}
+                product={product}
+                index={key + 1}
+                onRemove={onRemove}
+              />
           ));
     return result;
   };

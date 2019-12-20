@@ -9,11 +9,11 @@ const ProductsList = (props) => {
                   <thead>
                     <tr>
                       <th scope="col">#</th>
-                      <th scope="col">Code</th>
                       <th scope="col">Name</th>
                       <th scope="col">Price</th>
                       <th scope="col">Status</th>
                       <th scope="col">Action</th>
+                      <th scope="col">Detail</th>
                     </tr>
                   </thead>
                   <tbody>
